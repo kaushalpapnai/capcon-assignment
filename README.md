@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+***
 
-## Getting Started
+# Next.js E-commerce Mini Store
 
-First, run the development server:
+A fully responsive demo store built with Next.js (App Router) to demonstrate modern web approaches: SSG for the landing page, SSR for product listing, and ISR for product detail. No backend/database is required—products are delivered via in-memory API routes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+***
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Landing Page (`/`)
+- Clean hero section with a banner and CTA
+- Multiple sections (like featured, about, and product teasers—matches the Figma layout)
+- Clear, visible CTAs (e.g. “Shop Now”)
+- Built with **SSG** for maximum speed
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Product Listing Page (`/products`)
+- Products shown in a responsive grid layout
+- Basic filtering:
+  - Search bar
+  - Filter by gender ("Men", "Women", "All")
+  - Filter by category ("Shoes", "Apparel", "All")
+- Each product card links to its respective details page
+- Page is rendered using **SSR** to simulate real-time data
 
-## Learn More
+### 3. Product Detail Page (`/products/[id]`)
+- Detailed view with:
+  - 2x2 product image gallery
+  - Name, price, and product description
+  - Size/options grid (if relevant)
+  - CTA buttons (“Add to Cart”, “Favourite”)—for demo only, no functionality
+  - Extra details (Color shown, SKU/style code)
+- Fully **responsive** and matches the provided Figma/visual spec
+- Page uses **ISR**—incrementally updates every 60 seconds for freshness
 
-To learn more about Next.js, take a look at the following resources:
+***
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How to Use
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Install**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-## Deploy on Vercel
+2. **Run locally**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **View**
+   - Landing: [http://localhost:3000/](http://localhost:3000/)
+   - All products: [http://localhost:3000/products](http://localhost:3000/products)
+   - Product details: click any item in grid or visit `/products/[id]`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Deploy**
+   - Push to GitHub and import at [vercel.com](https://vercel.com/)
+   - _No environment variables needed for demo setup_
+   - Vercel auto-detects Next.js and deploys SSG/SSR/ISR out of the box
+
+***
+
+## Notes
+
+- All data/images are stored locally—no backend or env vars required.
+- No authentication, cart, or order logic (demo only).
+- UI and structure can be quickly adapted to real data or backend.
+- Mobile, tablet and desktop layouts are fully tested.
+
+***
