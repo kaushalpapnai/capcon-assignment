@@ -22,7 +22,7 @@ export default function Hero() {
 
       {/* Full-bleed hero media */}
       <div className="relative mx-auto max-w-[1300px] px-3 md:px-6">
-        <div className="relative w-full overflow-hidden rounded-lg border border-black/5 shadow-sm aspect-[16/9]">
+        <div className="relative w-full overflow-hidden border border-black/5 shadow-sm aspect-[16/9]">
           <Image
             src={hero_image}
             alt="Featured product"
