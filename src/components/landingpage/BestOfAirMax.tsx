@@ -22,7 +22,7 @@ export default function ProductRow() {
                   <div className={`relative w-full aspect-[${aspect}]`}>
                     <Image
                       src={p.image}
-                      alt={(p as any).imageAlt ?? p.title}
+                      alt={(p).imageAlt ?? p.title}
                       fill
                       sizes="(min-width: 1280px) 400px, (min-width: 768px) 33vw, 90vw"
                       className={contain ? "object-contain" : "object-cover"}
