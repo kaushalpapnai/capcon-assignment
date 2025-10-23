@@ -33,30 +33,28 @@ const WOMEN: Card[] = [
 function Lane({ title, items }: { title: string; items: Card[] }) {
   return (
     <section className="bg-white">
-
-      <HorizontalScroller actionLabel={title} actionHref="#">
+      <HorizontalScroller actionLabel={title} actionHref="#" gap={16}>
         {items.map((c) => (
-          <article key={c.id} className="w-[220px] md:w-[280px] lg:w-[300px] shrink-0">
+          <article key={c.id} className="w-[160px] shrink-0 sm:w-[190px] md:w-[240px] lg:w-[300px]">
             <Link href={c.href ?? "#"} className="block">
               <div className="relative overflow-hidden rounded-lg border border-black/5 bg-white">
-                <div className="relative w-full aspect-[3/4]">
+                <div className="relative w-full aspect-[4/5]">
                   <Image
                     src={c.image}
                     alt={c.title}
                     fill
-                    sizes="(min-width:1280px) 300px, 70vw"
                     className="object-cover"
+                    sizes="(min-width:1280px) 300px, (min-width:768px) 240px, 190px"
                   />
                 </div>
               </div>
             </Link>
-
-            <div className="mt-2 flex items-start justify-between gap-3">
+            <div className="mt-2 flex items-start justify-between gap-2">
               <div className="min-w-0">
-                <h4 className="text-[14px] font-medium text-gray-900 truncate">{c.title}</h4>
-                <p className="mt-1 text-[13px] text-gray-600 line-clamp-2">{c.subtitle}</p>
+                <h4 className="truncate text-[13px] font-medium text-gray-900">{c.title}</h4>
+                <p className="mt-1 line-clamp-1 text-[12px] text-gray-600">{c.subtitle}</p>
               </div>
-              <div className="shrink-0 text-[14px] font-medium text-gray-900">{c.price}</div>
+              <div className="shrink-0 pl-1 text-[13px] font-medium text-gray-900">{c.price}</div>
             </div>
           </article>
         ))}
@@ -66,22 +64,19 @@ function Lane({ title, items }: { title: string; items: Card[] }) {
 }
 
 
+
 export default function GearUpTwoLanes() {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-[1300px] px-3 md:px-6">
-        <h3 className="mb-6 text-2xl font-semibold text-gray-900">Gear Up</h3>
+        <h3 className="mb-4 text-xl font-semibold text-gray-900 md:mb-6 md:text-2xl">Gear Up</h3>
 
-        {/* Two lanes side-by-side on md+, stacked on mobile */}
-        <div className="grid gap-10 md:grid-cols-2">
-          <div>
-            <Lane title="Shop Men's" items={MEN} />
-          </div>
-          <div>
-            <Lane title="Shop Women's" items={WOMEN} />
-          </div>
+        <div className="grid gap-8 md:grid-cols-2 md:gap-10">
+          <Lane title="Shop Men's" items={MEN} />
+          <Lane title="Shop Women's" items={WOMEN} />
         </div>
       </div>
     </section>
   );
 }
+

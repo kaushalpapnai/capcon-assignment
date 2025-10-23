@@ -8,7 +8,7 @@ type ScrollerProps = {
   actionHref?: string;
   className?: string;
   containerClassName?: string;
-  gap?: number;
+  gap?: number; // must match track gap
 };
 
 export default function HorizontalScroller({
@@ -16,7 +16,7 @@ export default function HorizontalScroller({
   actionHref = "#",
   className = "",
   containerClassName = "",
-  gap = 24,
+  gap = 16, // smaller default for compact mobile
   children,
 }: PropsWithChildren<ScrollerProps>) {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -25,16 +25,16 @@ export default function HorizontalScroller({
     const el = trackRef.current;
     if (!el) return;
     const card = el.firstElementChild as HTMLElement | null;
-    const cardWidth = card ? card.getBoundingClientRect().width : 320;
-    const delta = dir === "next" ? cardWidth + gap : -cardWidth - gap;
+    const width = card ? card.getBoundingClientRect().width : 280;
+    const delta = dir === "next" ? width + gap : -width - gap;
     el.scrollBy({ left: delta, behavior: "smooth" });
   };
 
   return (
     <section className={`bg-white ${className}`}>
       <div className={`mx-auto max-w-[1300px] px-3 md:px-6 ${containerClassName}`}>
-        {/* Controls pinned to end */}
-        <div className="mb-6 flex items-center justify-end">
+        {/* Controls: hide on small, show on md+ */}
+        <div className="mb-3 hidden items-center justify-end md:flex md:mb-6">
           <div className="flex items-center gap-3">
             {actionLabel && (
               <Link
@@ -65,10 +65,10 @@ export default function HorizontalScroller({
           </div>
         </div>
 
-        {/* Track */}
+        {/* Track: gap must equal "gap" above */}
         <div
           ref={trackRef}
-          className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none]"
+          className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 md:gap-6 [-ms-overflow-style:none] [scrollbar-width:none]"
           style={{ scrollBehavior: "smooth" }}
         >
           <style jsx>{`div::-webkit-scrollbar{display:none}`}</style>
