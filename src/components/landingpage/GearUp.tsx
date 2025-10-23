@@ -36,7 +36,7 @@ function Lane({ title, items }: { title: string; items: Card[] }) {
       <HorizontalScroller actionLabel={title} actionHref="#" gap={16}>
         {items.map((c) => (
           <article key={c.id} className="w-[160px] shrink-0 sm:w-[190px] md:w-[240px] lg:w-[300px]">
-            <Link href={c.href ?? "#"} className="block">
+            <Link href={c.href ?? "/products"} className="block">
               <div className="relative overflow-hidden rounded-lg border border-black/5 bg-white">
                 <div className="relative w-full aspect-[4/5]">
                   <Image

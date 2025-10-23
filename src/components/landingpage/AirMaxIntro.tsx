@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 // components/AirMaxIntro.tsx
 function AirMaxIntro() {
   return (
@@ -17,18 +19,18 @@ function AirMaxIntro() {
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="#"
+          <Link
+            href="/products"
             className="inline-flex items-center justify-center rounded-full bg-gray-900 px-6 py-3 text-sm font-semibold text-white hover:bg-gray-800"
           >
             Notify Me
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/products"
             className="inline-flex items-center justify-center rounded-full border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-gray-50"
           >
             Shop Air Max
-          </a>
+          </Link>
         </div>
       </div>
     </section>

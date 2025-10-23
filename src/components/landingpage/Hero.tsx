@@ -1,5 +1,6 @@
 import Image from "next/image";
 import hero_image from "../../../images/hero.png";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -13,9 +14,9 @@ export default function Hero() {
           <p className="text-[13px] font-semibold text-gray-900">Hello Nike App</p>
           <p className="mt-0.5 text-[12px] text-gray-600">
             Download the app to access everything Nike.{" "}
-            <a href="#" className="underline hover:opacity-80">
+            <Link href="/products" className="underline hover:opacity-80">
               Get Your Great
-            </a>
+            </Link>
           </p>
         </div>
       </div>

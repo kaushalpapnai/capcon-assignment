@@ -29,7 +29,7 @@ export default function Essentials() {
                 Men&apos;s
               </span>
             </div>
-            <Link href="#" className="absolute inset-0" aria-label="Shop Men's essentials" />
+            <Link href="/products" className="absolute inset-0" aria-label="Shop Men's essentials" />
           </article>
 
         {/* Women's */}
@@ -48,7 +48,7 @@ export default function Essentials() {
                 Women&apos;s
               </span>
             </div>
-            <Link href="#" className="absolute inset-0" aria-label="Shop Women's essentials" />
+            <Link href="/products" className="absolute inset-0" aria-label="Shop Women's essentials" />
           </article>
 
         {/* Kids */}
@@ -67,7 +67,7 @@ export default function Essentials() {
                 Kids&apos;
               </span>
             </div>
-            <Link href="#" className="absolute inset-0" aria-label="Shop Kids' essentials" />
+            <Link href="/products" className="absolute inset-0" aria-label="Shop Kids' essentials" />
           </article>
         </div>
 
@@ -76,40 +76,40 @@ export default function Essentials() {
           <div>
             <h4 className="text-sm font-semibold text-gray-900">Icons</h4>
             <ul className="mt-3 space-y-2 text-sm text-gray-700">
-              <li><Link href="#" className="hover:underline">Air Force 1</Link></li>
-              <li><Link href="#" className="hover:underline">Huarache</Link></li>
-              <li><Link href="#" className="hover:underline">Air Max 90</Link></li>
-              <li><Link href="#" className="hover:underline">Air Max 95</Link></li>
+              <li><Link href="/products" className="hover:underline">Air Force 1</Link></li>
+              <li><Link href="/products" className="hover:underline">Huarache</Link></li>
+              <li><Link href="/products" className="hover:underline">Air Max 90</Link></li>
+              <li><Link href="/products" className="hover:underline">Air Max 95</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold text-gray-900">Shoes</h4>
             <ul className="mt-3 space-y-2 text-sm text-gray-700">
-              <li><Link href="#" className="hover:underline">All Shoes</Link></li>
-              <li><Link href="#" className="hover:underline">Custom Shoes</Link></li>
-              <li><Link href="#" className="hover:underline">Jordan Shoes</Link></li>
-              <li><Link href="#" className="hover:underline">Running Shoes</Link></li>
+              <li><Link href="/products" className="hover:underline">All Shoes</Link></li>
+              <li><Link href="/products" className="hover:underline">Custom Shoes</Link></li>
+              <li><Link href="/products" className="hover:underline">Jordan Shoes</Link></li>
+              <li><Link href="/products" className="hover:underline">Running Shoes</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold text-gray-900">Clothing</h4>
             <ul className="mt-3 space-y-2 text-sm text-gray-700">
-              <li><Link href="#" className="hover:underline">All Clothing</Link></li>
-              <li><Link href="#" className="hover:underline">Modest Wear</Link></li>
-              <li><Link href="#" className="hover:underline">Hoodies &amp; Pullovers</Link></li>
-              <li><Link href="#" className="hover:underline">Shirts &amp; Tops</Link></li>
+              <li><Link href="/products" className="hover:underline">All Clothing</Link></li>
+              <li><Link href="/products" className="hover:underline">Modest Wear</Link></li>
+              <li><Link href="/products" className="hover:underline">Hoodies &amp; Pullovers</Link></li>
+              <li><Link href="/products" className="hover:underline">Shirts &amp; Tops</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold text-gray-900">Kids&apos;</h4>
             <ul className="mt-3 space-y-2 text-sm text-gray-700">
-              <li><Link href="#" className="hover:underline">Infant &amp; Toddler Shoes</Link></li>
-              <li><Link href="#" className="hover:underline">Kids&apos; Shoes</Link></li>
-              <li><Link href="#" className="hover:underline">Kids&apos; Jordan Shoes</Link></li>
-              <li><Link href="#" className="hover:underline">Kids&apos; Basketball Shoes</Link></li>
+              <li><Link href="/products" className="hover:underline">Infant &amp; Toddler Shoes</Link></li>
+              <li><Link href="/products" className="hover:underline">Kids&apos; Shoes</Link></li>
+              <li><Link href="/products" className="hover:underline">Kids&apos; Jordan Shoes</Link></li>
+              <li><Link href="/products" className="hover:underline">Kids&apos; Basketball Shoes</Link></li>
             </ul>
           </div>
         </div>

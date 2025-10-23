@@ -1,5 +1,6 @@
 import Image from "next/image";
 import featuredImg from "../../../images/featured-image.jpg"; // replace with your image
+import Link from "next/link";
 
 export default function Featured() {
   return (
@@ -30,12 +31,12 @@ export default function Featured() {
             Cause everyone should know the feeling of running in that perfect pair.
           </p>
           <div className="mt-6">
-            <a
-              href="#"
+            <Link
+              href="/products"
               className="inline-flex items-center justify-center rounded-full bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-gray-800"
             >
               Find Your Shoe
-            </a>
+            </Link>
           </div>
         </div>
       </div>

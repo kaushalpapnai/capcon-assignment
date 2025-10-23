@@ -19,7 +19,7 @@ export default function Header() {
         {/* Categories centered */}
         <nav className="absolute left-1/2 hidden -translate-x-1/2 md:flex items-center gap-6">
           {categories.map((c) => (
-            <Link key={c} href="#" className="text-sm text-gray-800 hover:opacity-80">
+            <Link key={c} href="/products" className="text-sm text-gray-800 hover:opacity-80">
               {c}
             </Link>
           ))}

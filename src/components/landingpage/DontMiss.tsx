@@ -1,5 +1,6 @@
 import Image from "next/image";
 import featuredImg from "../../../images/dont-miss.png"; // replace with your image
+import Link from "next/link";
 
 export default function DontMiss() {
     const title = "Don't Miss";
@@ -31,12 +32,12 @@ export default function DontMiss() {
             Your built-to-last, all-week wears—but with style only Jordan Brand can deliver.
           </p>
           <div className="mt-6">
-            <a
-              href="#"
+            <Link
+              href="/products"
               className="inline-flex items-center justify-center rounded-full bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-gray-800"
             >
               Shop
-            </a>
+            </Link>
           </div>
         </div>
       </div>
